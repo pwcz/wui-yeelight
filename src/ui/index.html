@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload page</title>
+        <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <div id="app" v-cloak>
+        <center>
+        <button :class="className" @click="toggle"> {{ button_state }}</button>
+        <button class="button button-green" @click="turn_green">Green</button>
+        <button class="button button-red" @click="turn_red">Red</button>
+        <br/>
+        <div class="slidecontainer">
+<!--            <input v-model="sliderVal" type="range" min="1" max="100" step="1" @change="changeFoo" />-->
+            <input v-model="sliderVal" type="range" min="1" max="100" value="50" step="1" class="slider" id="myRange" @change="changeFoo">
+        </div>
+        </center>
+        </br>
+        </div>
+    </body>
+
+    <script src="https://unpkg.com/vue/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.unpkg.com/vue-form@4.10.3/dist/vue-form.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+</html>
