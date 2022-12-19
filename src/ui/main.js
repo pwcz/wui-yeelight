@@ -45,15 +45,18 @@ let app = Vue.createApp({
         },
         update_button_status()
         {
+            const favicon = document.querySelector("link[rel*='icon']");
             if (this.power_state)
             {
                 this.className = "button button-" + this.current_color;
                 this.button_state = "Turn OFF";
+                favicon.href = "lightbulb-on.ico";
             }
             else
             {
                 this.className = "button";
                 this.button_state = "Turn ON";
+                favicon.href = "lightbulb-off.ico";
             }
         }
     },
